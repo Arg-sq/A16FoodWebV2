@@ -54,8 +54,19 @@
                 grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
                 gap:20px;
             }
-            .menu-item{
-
+            .menu-item img{
+                width:280px;
+                height:280px;
+                border-radius: 10px;
+            }
+            .menu-item h3{
+                margin:16px 0 10px;
+            }
+            .special-container{
+                display: flex;
+                flex-wrap: wrap;
+                gap:20px;
+                justify-content: center;
             }
 
         </style>
@@ -98,6 +109,23 @@
 
             </div>
 
+        </section>
+        <section class="special-section">
+            <h2>Chef's special</h2>
+            <div class="special-container">
+                <div class="special-item">
+                    <h3> Truffle burger</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tempore </p>
+                </div>
+                <div class="special-item">
+                    <h3> Lobster sauce</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tempore </p>
+                </div>
+                <div class="special-item">
+                    <h3>Chocolate lava cake</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tempore </p>
+                </div>
+            </div>
         </section>
     </body>
 </html>
