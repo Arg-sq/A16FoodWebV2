@@ -44,6 +44,19 @@
                 color:white;
                 text-decoration: none;
             }
+            .menu-section{
+                background-color: #f7f7f7;
+                padding: 50px 20px;
+                text-align: center;
+            }
+            .menu-container{
+                display:grid;
+                grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+                gap:20px;
+            }
+            .menu-item{
+
+            }
 
         </style>
     </head>
@@ -60,5 +73,31 @@
             <a href="#about">About us</a>
             <a href="#contact">Contact us</a>
         </nav>
+        <section class="menu-section">
+            <div class="menu-container">
+                <div class="menu-item">
+                    <img src="./images/pizza.jpg" alt="pizza photo">
+                    <h3>Cheese Pizza</h3>
+                    <p>Classic Meat lovers pizza topped with mozerella cheese and pepporonies</p>
+                </div>
+                <div class="menu-item">
+                    <img src="./images/burger.jpg" alt="burger photo">
+                    <h3>Chesseburger</h3>
+                    <p>Juicy chicken patty with melted cheese,lettuce and tomato</p>
+                </div>
+                <div class="menu-item">
+                    <img src="./images/fried-chicken.jpg" alt="fried chicken photo">
+                    <h3>Korean Fried chicken</h3>
+                    <p>Crispy, crunchy fried chicken with hot bbq sauce and sesame seed sprinkles</p>
+                </div>
+                <div class="menu-item">
+                    <img src="./images/pasta.jpg" alt="pasta">
+                    <h3>Garlic sauce pasta</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ad animi reprehenderit nesciunt !</p>
+                </div>
+
+            </div>
+
+        </section>
     </body>
 </html>
