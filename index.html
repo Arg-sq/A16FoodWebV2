@@ -1,237 +1,446 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width ,initial-scale-1.0">
-        <title>Delicious Bites</title>
-        <style>
-            *{
-                margin:0;
-                padding: 0;
-            }
-            body{
-                font-family: Arial, sans-serif;
-            }
-            header{
-                height: 100dvh;
-                background: url(./images/hero.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                text-align: center;
+<html lang="en">
 
-            }
-            header h1{
-                font-size: 3.5rem;
-                margin-bottom: 20px;
-            }
-            header p{
-                font-size: 1.5rem;
-            }
-            nav{
-                background-color: #333;
-                /* color: white; */
-                padding: 1rem;
-                text-align: center;
-                display: flex;
-                justify-content: center;
-                gap:16px
-            }
-            nav a{
-                color:white;
-                text-decoration: none;
-            }
-            .menu-section{
-                background-color: #f7f7f7;
-                padding: 50px 20px;
-                text-align: center;
-            }
-            .menu-container{
-                display:grid;
-                grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-                gap:20px;
-            }
-            .menu-item img{
-                width:280px;
-                height:280px;
-                border-radius: 10px;
-            }
-            .menu-item h3{
-                margin:16px 0 10px;
-            }
-            .special-container{
-                display: flex;
-                flex-wrap: wrap;
-                gap:20px;
-                justify-content: center;
-            }
-            .special-section{
-                background:linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(./images/banner.jpg) lightgray 50% / cover no-repeat;
-           padding: 60px 20px;
-            }
-            .special-item{
-                background: white;
-                padding: 20px;
-                color:#333;
-                border-radius: 20px;
-                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-                text-align: center;
-                max-width: 300px;
-            }
-            .about-section{
-                background: #f8f8f8;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-            }
-            .about-text ,.about-image{
-                flex:1;
-                max-width:600px;
-                min-width: 200px;
-                padding: 20px;
-            }
-            .about-text h2{
-                margin-bottom: 20px;
-            }
-            .about-text p{
-                margin-bottom: 15px;
-            }
-            .about-image img{
-            width:100%;
-            }
-            .menu-table{
-                width: 100%;
-            }
-            .menu-table th, td{
-                border:1px solid #ddd;
-                padding:10px;
-            }
-            .menu-table th{
-                background-color: #f4f4f4;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        </style>
-    </head>
-    <body>
-        <header>
-            <div>
-                <h1>Welcome to Delicious Bites</h1>
-                <p>Indulge in the flavours of perfection with iconic foods!</p>
-            </div>
-        </header>
-        <nav>
-            <a href="#menu">Menu</a>
-            <a href="#specials">Specials</a>
-            <a href="#about">About us</a>
-            <a href="#contact">Contact us</a>
-        </nav>
-        <section class="menu-section">
-            <div class="menu-container">
-                <div class="menu-item">
-                    <img src="./images/pizza.jpg" alt="pizza photo">
-                    <h3>Cheese Pizza</h3>
-                    <p>Classic Meat lovers pizza topped with mozerella cheese and pepporonies</p>
-                </div>
-                <div class="menu-item">
-                    <img src="./images/burger.jpg" alt="burger photo">
-                    <h3>Chesseburger</h3>
-                    <p>Juicy chicken patty with melted cheese,lettuce and tomato</p>
-                </div>
-                <div class="menu-item">
-                    <img src="./images/fried-chicken.jpg" alt="fried chicken photo">
-                    <h3>Korean Fried chicken</h3>
-                    <p>Crispy, crunchy fried chicken with hot bbq sauce and sesame seed sprinkles</p>
-                </div>
-                <div class="menu-item">
-                    <img src="./images/pasta.jpg" alt="pasta">
-                    <h3>Garlic sauce pasta</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ad animi reprehenderit nesciunt !</p>
-                </div>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
 
-            </div>
+        header {
+            background: url('./images/hero.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-        </section>
-        <section class="special-section">
-            <h2>Chef's special</h2>
-            <div class="special-container">
-                <div class="special-item">
-                    <h3> Truffle burger</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tempore </p>
-                </div>
-                <div class="special-item">
-                    <h3> Lobster sauce</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tempore </p>
-                </div>
-                <div class="special-item">
-                    <h3>Chocolate lava cake</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tempore </p>
-                </div>
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.5rem;
+        }
+
+        nav {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-section,
+        .about-section,
+        .contact-section,
+        .table-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .menu-section {
+            background: #f8f8f8;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            width: 280px;
+            height: 280px;
+            border-radius: 10px;
+        }
+
+        .menu-item h3 {
+            margin: 15px 0 10px;
+        }
+
+        .special-section {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(./images/banner.jpg) lightgray 50% / cover no-repeat;
+            background-repeat: no-repeat;
+            background-position: center center;
+            overlay: rgba(0, 0, 0, 0.9);
+            background-size: cover;
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .special-section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .special-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .special-item {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .menu-table th,
+        .menu-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .menu-table th {
+            background-color: #f4f4f4;
+        }
+
+        .menu-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .menu-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .menu-table input[type="number"] {
+            padding: 5px;
+            width: 60px;
+            text-align: center;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .contact-details,
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            /* Ensures stacking for narrow screens */
+        }
+
+        .about-section {
+            background: #f8f9fa;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .about-text,
+        .about-image {
+            flex: 1;
+            max-width: 600px;
+            min-width: 280px;
+            padding: 20px;
+        }
+
+        .about-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .contact-section {
+            background: #e9ecef;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .contact-details,
+        .contact-form {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .contact-details {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .contact-details h3 {
+            margin-bottom: 15px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form button {
+            background: #f4a261;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        .contact-form button:hover {
+            background: #e76f51;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Welcome to Delicious Bites</h1>
+            <p>Indulge in the flavors of perfection with our iconic dishes!</p>
+        </div>
+    </header>
+    <nav>
+        <a href="#menu">Menu</a>
+        <a href="#specials">Specials</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="menu" class="menu-section">
+        <h2>Our Menu</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="./images/pizza.jpg" alt="Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Classic pizza topped with fresh tomato sauce, mozzarella, and basil.</p>
             </div>
-        </section>
-        <section class="about-section">
-            <div class="about-text">
-                <h2>About us</h2>
-                <p>At delicious bites , we are passionate about serving high quality food</p>
-                <p>Founded in 2021, we have grown to 200+ members</p>
-                <p>Visit us for a fine dining restaurant experience</p>
+            <div class="menu-item">
+                <img src="./images/burger.jpg" alt="Burger">
+                <h3>Cheeseburger</h3>
+                <p>Juicy beef patty with melted cheese, fresh lettuce, and tomato.</p>
             </div>
-           
-            <div class="about-image">
-                <img src="./images/about.jpg" alt="about image">
+            <div class="menu-item">
+                <img src="./images/pasta.jpg" alt="Pasta">
+                <h3>Alfredo Pasta</h3>
+                <p>Creamy Alfredo sauce over perfectly cooked fettuccine pasta.</p>
             </div>
-        </section>
-        <section class="table-section">
-            <h3>Menu Categories</h3>
-            <table class="menu-table">
-                <thead>
-                    <tr>
-                        <th>Category</th>
-                        <th>Dish</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Calories</th>
-                        <th>Quantity</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Appetizers</td>
-                        <td>Chicken wings</td>
-                        <td>Toasted chicken with garlic sauce</td>
-                        <td>$10</td>
-                        <td>250</td>
-                        <td><input type="number" value="1" min="1"></td>
-                    </tr>
-                    <tr>
-                        <td>Appetizers</td>
-                        <td>Chicken wings</td>
-                        <td>Toasted chicken with garlic sauce</td>
-                        <td>$10</td>
-                        <td>250</td>
-                        <td><input type="number" value="1" min="1"></td>
-                    </tr>
-                    <tr>
-                        <td>Appetizers</td>
-                        <td>Chicken wings</td>
-                        <td>Toasted chicken with garlic sauce</td>
-                        <td>$10</td>
-                        <td>250</td>
-                        <td><input type="number" value="1" min="1"></td>
-                    </tr>
-                    <tr>
-                        <td>Appetizers</td>
-                        <td>Chicken wings</td>
-                        <td>Toasted chicken with garlic sauce</td>
-                        <td>$10</td>
-                        <td>250</td>
-                        <td><input type="number" value="1" min="1"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </body>
+            <div class="menu-item">
+                <img src="./images/fried-chicken.jpg" alt="Salad">
+                <h3>Korean Fried Chicken</h3>
+                <p>Crispy Fried chicken with hot bb and garlic sauce.</p>
+            </div>
+        </div>
+    </section>
+    <section id="specials" class="special-section">
+        <h2>Chef's Specials</h2>
+        <div class="special-container">
+            <div class="special-item">
+                <h3>Truffle Burger</h3>
+                <p>Rich and savory burger infused with truffle oil and topped with gourmet cheese.</p>
+            </div>
+            <div class="special-item">
+                <h3>Lobster Bisque</h3>
+                <p>A creamy and flavorful soup made with fresh lobster and herbs.</p>
+            </div>
+            <div class="special-item">
+                <h3>Chocolate Lava Cake</h3>
+                <p>Decadent chocolate cake with a gooey molten center, served with vanilla ice cream.</p>
+            </div>
+        </div>
+    </section>
+    <section id="" class="table-section">
+        <h3>Menu Categories</h3>
+        <table class="menu-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Dish</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Calories</th>
+                    <th>Select Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Appetizers -->
+                <tr>
+                    <td>Appetizer</td>
+                    <td>Bruschetta</td>
+                    <td>Toasted bread topped with a fresh mix of tomatoes, basil, and olive oil.</td>
+                    <td>$7.99</td>
+                    <td>250</td>
+                    <td><input type="number" name="quantity" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td>Appetizer</td>
+                    <td>Stuffed Mushrooms</td>
+                    <td>Mushrooms stuffed with garlic, herbs, and cheese, baked to perfection.</td>
+                    <td>$9.99</td>
+                    <td>180</td>
+                    <td><input type="number" name="quantity" value="1" min="1"></td>
+                </tr>
+
+                <!-- Main Courses -->
+                <tr>
+                    <td>Main Course</td>
+                    <td>Spaghetti Bolognese</td>
+                    <td>Rich meat sauce over spaghetti, topped with parmesan cheese.</td>
+                    <td>$12.99</td>
+                    <td>800</td>
+                    <td><input type="number" name="quantity" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td>Main Course</td>
+                    <td>BBQ Ribs</td>
+                    <td>Tender ribs coated in smoky BBQ sauce, served with fries.</td>
+                    <td>$16.99</td>
+                    <td>1200</td>
+                    <td><input type="number" name="quantity" value="1" min="1"></td>
+                </tr>
+
+                <!-- Desserts -->
+                <tr>
+                    <td>Dessert</td>
+                    <td>Chocolate Lava Cake</td>
+                    <td>A decadent chocolate cake with a gooey molten center, served with vanilla ice cream.</td>
+                    <td>$8.49</td>
+                    <td>450</td>
+                    <td><input type="number" name="quantity" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td>Dessert</td>
+                    <td>Tiramisu</td>
+                    <td>A classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream.
+                    </td>
+                    <td>$6.99</td>
+                    <td>320</td>
+                    <td><input type="number" name="quantity" value="1" min="1"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="about" class="about-section">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>At Delicious Bites, we are passionate about serving the freshest and most delicious meals. Our chefs use
+                only the best ingredients to create dishes that will tantalize your taste buds.</p>
+            <p>Founded in 2020, we have quickly become a favorite destination for food lovers, offering a unique blend
+                of traditional and modern culinary delights.</p>
+            <p>Visit us to experience warm hospitality, great ambiance, and an unforgettable dining experience.</p>
+        </div>
+        <div class="about-image">
+            <img src="./images/about.jpg" alt="About Us">
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-details">
+                <h3>Get in Touch</h3>
+                <p><strong>Email:</strong> info@deliciousbites.com</p>
+                <p><strong>Phone:</strong> +1 (234) 567-890</p>
+                <p><strong>Location:</strong> 123 Foodie Lane, Flavor Town</p>
+                <p>Follow us on social media to stay updated with our latest offers and events.</p>
+            </div>
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Delicious Bites. All rights reserved.</p>
+    </footer>
+</body>
+
 </html>
